@@ -1,0 +1,22 @@
+@import "base.less";
+@import "colors.less";
+
+.tooltip {
+  margin: 0;
+  padding: 15px;
+  border: 0;
+  font-size: 13px;
+  float: left;
+  position: relative;
+  &.error{
+    background-color: @error-color;
+  }
+  div{
+    position: absolute;
+    bottom: -10px;
+    margin-left: -10px;
+    width: 0;
+    left:50%;
+    .arrow-down (10px, @error-color)
+  }
+}

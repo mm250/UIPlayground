@@ -1,0 +1,62 @@
+@import "base.less";
+@import "colors.less";
+
+@select-height: 40px;
+@select-width: 200px;
+
+@select-button-height: 40px;
+@select-button-width: 40px;
+
+
+.select {
+  background-color: @secondary-color;
+  position: relative;
+  float: left;
+  height: @select-height;
+  .item-value{
+    float: left;
+    font-size: 13px;
+    padding: 11px 15px;
+    min-width: @select-width - @select-button-width;
+  }
+  .button{
+    float: right;
+    display: inline-block;
+    height: @select-button-height;
+    width: @select-button-width;
+    &.down{
+      div{
+        .arrow-down(6px, #fff);
+        margin: 16px auto;
+      }
+    }
+    &.up{
+      background-color: @primary-color;
+      div{
+        .arrow-up(6px, #fff);
+        margin: 16px auto;
+      }
+    }
+  }
+  .select-list {
+    position: absolute;
+    top: @select-height;
+    left: 0;
+    width: @select-width + 30px;
+    color: @secondary-font-color;
+    font-size: 13px;
+    margin:0;
+    padding: 0;
+    background-color: #fff;
+    li {
+      list-style-type: none;
+      padding: 11px 15px;
+      &.highlight{
+        background-color: @highlight-color;
+        color: @primary-font-color;
+      }
+    }
+    text-decoration: none;
+  }
+}
+

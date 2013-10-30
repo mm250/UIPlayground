@@ -1,0 +1,50 @@
+@import "base.less";
+@import "colors.less";
+
+
+@dialog-height: 300px;
+@dialog-width: 600px;
+
+@title-height:30px;
+
+.dialog {
+  background-color: @primary-color;
+  height: @dialog-height;
+  width: @dialog-width;
+
+  // title bar
+  .title-bar {
+    background-color: @secondary-color;
+    height: @title-height;
+    width: 100%;
+    padding-top:11px;
+    .title {
+      font-size: 13px;
+      display: inline-block;
+      //margin-top: 11px;
+      margin-left: 15px;
+    }
+    .close {
+      float: right;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #343a41;
+      text-decoration: none;
+      margin-right: 15px;
+      opacity: 0.7;
+      &:hover {
+        color: #343a41;
+        text-decoration: none;
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // content
+  .content {
+    padding: 35px;
+  }
+}
